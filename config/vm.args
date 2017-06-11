@@ -1,0 +1,6 @@
+-sname iqbus_client
+
+-setcookie iqbus_client_cookie
+
++K true
++A30

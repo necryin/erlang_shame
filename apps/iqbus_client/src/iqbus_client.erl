@@ -13,6 +13,7 @@ start_link() ->
     {ok, Conf} = application:get_env(iqbus_client, connection),
     [{host, Host}, {port, Port}] = Conf, 
     connect(Host, Port).
+
 connect(Host, Port) ->
     {ok, Socket} = gen_tcp:connect(Host, Port, [binary, {active, false}]),
     io:format("client opened socket=~p~n", [Socket]),
